@@ -1,0 +1,14 @@
+Feedback for: lyf99
+--------------------------------------------------------------
+Total Score (%): 100
+Unit Test Score (out of 38): 38
+System Test Score (out of 24): 24
+Code Score (out of 10): 10
+Writeup Score (out of 10): 10
+--------------------------------------------------------------
+Writeup Feedback:
+Nicely done!
+
+CodeFeedback: 
+(-0) close all iterators in close() in Delete.java
+Good work!

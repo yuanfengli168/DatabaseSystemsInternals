@@ -1,0 +1,9 @@
+Feedback for: lyf99
+--------------------------------------------------------------
+Total Score: 99
+Unit Test Score: 75
+System Test Score: 5
+Code Score: 10
+Writeup Score: 9
+--------------------------------------------------------------
+"Code Feedback: Try and clean up the code and try to think of more efficient ways of implementing some parts by taking different data structures into consideration. For example, you could have used a HashMap to keep track of IDs, table names, and files. Nicely done!  WriteUp Feedback: (-1) You could explain why you chose to use Lists in Catalog.java instead of HashMap. Good work!"

@@ -1,0 +1,29 @@
+Lab4 - Write Up
+Yuanfeng Li
+March 5th. 2021
+
+1. Describe your implementation including any design decisions you made. Make sure to emphasize anything that was difficult or unexpected:
+
+Answer: 
+I have implemented rollback and recovery functions depends on the log file. From the rollback perspective, it will start from the first record for the transaction and undo the change for any update log. On the other hand, for recover, it will start from the last checkpoint (it will be 0 if not existed), collect transaction ids of all active transactions and redo all of them at the end. I have made a private helper method called rollback_helper in LogFile.java which takes a long type as the input variable, the long type is the myid of the TransactionID (geting from tid.getId()). The reason is because it will make it easier for me to process the transaction by the long type, and it is hard to get the transactionId. So recover can call rollback with long type as well.
+
+2. Discuss and justify any changes you made outside of LogFile.java:
+
+Answer: 
+In BufferPool.java, I have changed transactionComplete() method and it sets before image before flush pages. I also changed the evictPage, so that it will aloow any page to be evicted. I have also followed the instruction and added logging in flushPage() as it says so. 
+
+3. Describe a unit test that could be added to improve the set of unit tests that we provided for this lab 
+
+Answer: 
+We can add a Abort Crash:
+T1 inserts but does not abort
+T2 inserts and abort
+T3 inserts and commit
+T4 inserts and does not commit 
+Crash
+
+4. If you have any feedback for us on the assignment, you can add it to the writeup, send us an email, or make a note and paste your note in the course evaluation form at the end of the quarter.
+
+Answer: No, I dont' have any.                                                                                       
+~                                                                                       
+.
